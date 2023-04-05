@@ -13,15 +13,17 @@ function addItem() {
   li.innerHTML = addInput.value;
   li.style.color = lastPickedColor;
   changeColor();
-  itemList.appendChild("li");
+  itemList.appendChild(li);
 
   addInput.value = "";
 }
 
 // remove item
+
 function removeItem() {
+  let li = document.querySelector("li:last-child"); 
   itemList.removeChild(li);
-  let li = document.querySelector("li:last-child");
+  
 }
 
 // change color
